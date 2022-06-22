@@ -2,7 +2,7 @@
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
-
+import Link from 'next/link';
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
@@ -42,7 +42,7 @@ export default function Option() {
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <a
+                <Link
                   href="/sign"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
@@ -50,12 +50,12 @@ export default function Option() {
                   )}
                 >
                   sign in
-                </a>
+                </Link>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <a
+                <Link
                   href="/profiles"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
@@ -63,7 +63,7 @@ export default function Option() {
                   )}
                 >
                   profile
-                </a>
+                </Link>
               )}
             </Menu.Item>
             <form>

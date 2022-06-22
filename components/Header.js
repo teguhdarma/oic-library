@@ -1,6 +1,6 @@
 import { SearchIcon, UserCircleIcon, UserIcon } from '@heroicons/react/solid';
 import { useState } from 'react';
-
+import React from 'react';
 import { useRouter } from 'next/router';
 import Option from './Option';
 import Cart from './Cart';

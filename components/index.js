@@ -3,4 +3,7 @@ export { default as Option } from './Option';
 export { default as Slide } from './Slide';
 export { default as Header } from './Header';
 export { default as Product } from './Product';
+export { default as Simple } from './Simple';
 export { default as Footer } from './Footer';
+export { default as Signin } from './Signin';
+export { default as FooterBanner } from './FooterBanner';

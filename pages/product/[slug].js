@@ -257,7 +257,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
     'comments': *[_type == "comment" && post._ref == ^._id],
   }
   `;
-  const productsQuery = '*[_type == "product"]';
+  const productsQuery = '*[_type == "movie"]';
 
   const product = await client.fetch(query);
   const products = await client.fetch(productsQuery);

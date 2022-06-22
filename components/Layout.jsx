@@ -1,16 +1,16 @@
 import React from 'react';
-
 import Footer from './Footer';
 import Header from './header';
+import Head from 'next/head';
 
 const Layout = ({ children }) => {
   return (
-    <div className="layout">
+    <div>
       <header>
         <Header />
       </header>
       <main className="main-container">{children}</main>
-      <footer>
+      <footer className="mt-12">
         <Footer />
       </footer>
     </div>

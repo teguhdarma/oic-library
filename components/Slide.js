@@ -12,7 +12,7 @@ const Slide = ({ product: { poster, title, slug } }) => {
               src={urlFor(poster)}
               alt={poster[0]?.alternativeText}
               layout="fill"
-              className="rounded-xl  scrollbar-hide　 h-80 w-80"
+              className="rounded-xl  scrollbar-hide h-80 w-80"
             />
           </div>
 

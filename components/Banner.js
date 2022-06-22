@@ -8,7 +8,7 @@ import { OrbitControls, Drei } from '@react-three/drei';
 function Banner() {
   return (
     <div className="text-center mt-10">
-      <p className="text-6xl font-semibold font-mono text-gray-500">
+      <p className="text-6xl font-semibold font-mono text-blue-400">
         OIC LIBRARY
       </p>
       <p>岡山情報ビジネス学院</p>

@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from './Footer';
-import Header from './header';
-import Head from 'next/head';
+import Header from './Header';
 
 const Layout = ({ children }) => {
   return (

@@ -42,30 +42,30 @@ export default function Option() {
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <Link
-                  href="/sign"
+                <div
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                  sign in
-                </Link>
+                  <Link href="/sign">sign in</Link>
+                </div>
               )}
             </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <Link
-                  href="/profiles"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  profile
-                </Link>
-              )}
-            </Menu.Item>
+            <form>
+              <Menu.Item>
+                {({ active }) => (
+                  <div
+                    className={classNames(
+                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                      'block px-4 py-2 text-sm'
+                    )}
+                  >
+                    <Link href="/profiles">profile</Link>
+                  </div>
+                )}
+              </Menu.Item>
+            </form>
             <form>
               <Menu.Item>
                 {({ active }) => (

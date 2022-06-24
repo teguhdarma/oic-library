@@ -14,6 +14,7 @@ import plotSummary from './plotSummary';
 import plotSummaries from './plotSummaries';
 import tipe from './tipe';
 import banner from './banner';
+import comment from './comment';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -36,5 +37,6 @@ export default createSchema({
     crewMember,
     tipe,
     banner,
+    comment,
   ]),
 });

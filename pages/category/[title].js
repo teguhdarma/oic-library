@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { client, urlFor } from '../../lib/client';
 import { useRouter } from 'next/router';
+import PortableText from 'react-portable-text';
 const Tipees = ({ posts }) => {
   const { poster, overview } = posts;
   const Router = useRouter();
@@ -12,27 +13,45 @@ const Tipees = ({ posts }) => {
       <h2 className="text-4xl leading-8 font-semibold mb-12 text-slate-700 mt-4 ml-20">
         look at {title}
       </h2>
-      <div className="grid grid-cols-3 gap-4 ml-20">
+      <div className="products-container">
         {posts.map((post) => (
           <Link key={post._id} href={`/product/${post.slug.current}`}>
             <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <a href="#">
-                <img
-                  className="rounded-t-lg w-full h-80"
-                  src={urlFor(post.poster).url()}
-                  alt=""
-                />
-              </a>
-
+              <img
+                className="rounded-t-lg w-full h-80"
+                src={urlFor(post.poster).url()}
+                alt=""
+              />
               <div className="p-5">
-                <a href="#">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    {post.title}
-                  </h5>
-                </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  {post.description}
-                </p>
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  {post.title}
+                </h5>
+
+                <div>
+                  <PortableText
+                    content={post.overview}
+                    serializers={{
+                      h1: ({ porps }) => (
+                        <h1 className="text-3xl font-bold my-5{...props}"></h1>
+                      ),
+                      h2: ({ porps }) => (
+                        <h2 className="text-xl font-bold my-5{...props}" />
+                      ),
+                      li: ({ children }) => (
+                        <li className="ml-4 list-disc">{children}</li>
+                      ),
+                      link: ({ href, children }) => (
+                        <a
+                          href={href}
+                          className="text-blue-500 hover:underline"
+                        >
+                          {children}
+                        </a>
+                      ),
+                    }}
+                  />
+                </div>
+
                 <a
                   href="#"
                   className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -60,9 +79,11 @@ export async function getServerSideProps(context) {
   const location = context.query.title;
   const query = `*[_type == "movie" && tipe->title == $location]
   {
+    id,
     slug,
     poster,
-    title
+    title,
+    overview
   }`;
   const params = { location: location };
   const posts = await client.fetch(query, params);

@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
-import {
-  AiOutlineMinus,
-  AiOutlinePlus,
-  AiFillStar,
-  AiOutlineStar,
-} from 'react-icons/ai';
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import Swal from 'sweetalert2';
 import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContex';
 import { useForm } from 'react-hook-form';
 import PortableText from 'react-portable-text';
+import Description from '../../components/Description';
 
 const ProductDetails = ({ product, products }) => {
   console.log(product);
@@ -70,7 +66,7 @@ const ProductDetails = ({ product, products }) => {
               <AiFillStar />
               <AiOutlineStar />
             </div>
-            <p>(20)</p>
+            <p>{product.popularity}</p>
           </div>
           <div>
             <PortableText
@@ -93,20 +89,7 @@ const ProductDetails = ({ product, products }) => {
               }}
             />
           </div>
-          {/* <div className="flex">
-            <div className="quantity">
-              <h3>Quantity:</h3>
-              <p className="quantity-desc">
-                <span className="minus" onClick={decQty}>
-                  <AiOutlineMinus />
-                </span>
-                <span className="num">{qty}</span>
-                <span className="plus" onClick={incQty}>
-                  <AiOutlinePlus />
-                </span>
-              </p>
-            </div>
-          </div> */}
+
           <div className="buttons">
             <button
               type="button"
@@ -116,14 +99,17 @@ const ProductDetails = ({ product, products }) => {
               Add to Cart
             </button>
             <button type="button" className="buy-now" onClick={handleBuyNow}>
-              Buy Now
+              borrow now
             </button>
           </div>
         </div>
       </div>
+      <div>
+        <Description />
+      </div>
 
-      <div className="maylike-products-wrapper">
-        <h2>You may also like</h2>
+      <div className="products-heading ">
+        <h2 className="br-4">You may also like</h2>
         <div className="marquee">
           <div className="maylike-products-container track">
             {products.map((item) => (
@@ -253,6 +239,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
     _id,
     poster,
     overview,
+    popularity,
     title,
     'comments': *[_type == "comment" && post._ref == ^._id],
   }

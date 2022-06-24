@@ -57,7 +57,6 @@ const Home = ({ products, bannerData, slides }) => {
           <div className="products-heading">
             <h2>Category</h2>
           </div>
-
           <Simple slides={slides} />
         </div>
       </section>

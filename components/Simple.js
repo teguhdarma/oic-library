@@ -1,6 +1,7 @@
 import React from 'react';
 import { urlFor } from '../lib/client';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
+import { motion } from 'framer-motion';
 const Simple = (props) => {
   const slideLeft = () => {
     var slider = document.getElementById('slider');
@@ -32,22 +33,27 @@ const Simple = (props) => {
               <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
                 <p className="slider-card-title">{slide.title}</p>
                 <p className="slider-card-description">{slide.description}</p>
-                <a
-                  href={`/category/${slide.title}`}
-                  className="
+
+                <div>
+                  <motion.button whileTap={{ scale: 1.5 }}>
+                    <a
+                      href={`/category/${slide.title}`}
+                      className="
                      inline-block
                      py-2
                      px-7
-                     border border-[#E5E7EB]
+                     border border-[#5181e0]
                      rounded-full
                      text-base text-body-color
                      font-medium
-                     hover:border-primary hover:bg-primary hover:text-white
+                     hover:border-primary hover:bg-primary hover:text-blue
                      transition
                      "
-                >
-                  View Details
-                </a>
+                    >
+                      View Details
+                    </a>
+                  </motion.button>
+                </div>
               </div>
             </div>
           );

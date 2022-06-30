@@ -5,6 +5,7 @@ import React from 'react';
 import '../styles/Slider.css';
 import { StateContext } from '../context/StateContex';
 import Layout from '../components/Layout';
+import { Toaster } from 'react-hot-toast';
 
 const progress = new ProgressBar({
   size: 4,
@@ -20,6 +21,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <StateContext>
       <Layout>
+        <Toaster />
         <Component {...pageProps} />
       </Layout>
     </StateContext>

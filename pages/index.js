@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 import React from 'react';
 import {
   Header,
@@ -11,7 +12,25 @@ import {
 } from '../components';
 
 import { client } from '../lib/client';
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
 
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
 const Home = ({ products, bannerData, slides }) => {
   const sliderClick = (slider) => {
     alert('hello world');
@@ -46,9 +65,10 @@ const Home = ({ products, bannerData, slides }) => {
           <h2>All book </h2>
           <p>speakers of many variationals</p>
         </div>
+
         <div className="products-container">
           {products?.map((product) => (
-            <Product key={product._id} product={product} />
+            <Product key={product._id} product={product} variants={item} />
           ))}
         </div>
       </section>
@@ -57,6 +77,7 @@ const Home = ({ products, bannerData, slides }) => {
           <div className="products-heading">
             <h2>Category</h2>
           </div>
+
           <Simple slides={slides} />
         </div>
       </section>

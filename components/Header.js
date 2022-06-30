@@ -3,6 +3,10 @@ import { useState } from 'react';
 import React from 'react';
 import { useRouter } from 'next/router';
 import Option from './Option';
+import { AiOutlineShopping } from 'react-icons/ai';
+import Link from 'next/link';
+import Cart from './Cart';
+import { useStateContext } from '../context/StateContex';
 
 function Header({ placeholder }) {
   // kalender
@@ -11,7 +15,7 @@ function Header({ placeholder }) {
   const [endDate, setEndDate] = useState(new Date());
   const [noOfGuests, setNoOfGuest] = useState(1);
   const router = useRouter();
-
+  const { showCart, setShowCart, totalQuantities } = useStateContext();
   const search = () => {
     router.push({
       pathname: '/search',
@@ -56,23 +60,27 @@ function Header({ placeholder }) {
           type="text"
           placeholder={placeholder || 'start your search'}
         />
-        <SearchIcon className="hidden md:inline-flex h-8 bg-blue-400 text-white rounded-full p-2 cursor-pointer md:mx-2" />
+        <Link href="/search">
+          <SearchIcon className="hidden md:inline-flex h-8 bg-blue-400 text-white rounded-full p-2 cursor-pointer md:mx-2" />
+        </Link>
       </div>
       {/* right */}
 
       <div className="flex items-center space-x-4 justify-end text-gray-500">
+        <button className="cart-icon" onClick={() => setShowCart(true)}>
+          <AiOutlineShopping />
+          <span className="cart-item-qty">{totalQuantities}</span>
+        </button>
+        {showCart && <Cart />}
         <div className="flex items-center space-x-1 border-2 p-2 rounded-full">
           <UserCircleIcon className="h-6" />
           <div>
-            {/* <Cart /> */}
             <div>
               <Option />
             </div>
           </div>
         </div>
       </div>
-
-      {/* kalender */}
     </header>
   );
 }

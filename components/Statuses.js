@@ -55,8 +55,8 @@ function column() {
       // use_in_search:false
     },
     {
-      field: 'front_end_position.name',
-      use: 'time',
+      field: 'updated_at',
+      use: 'updated_at',
     },
   ];
 }
@@ -91,6 +91,26 @@ function fakePlayers() {
       position_id: 1,
       shirt_number: '11',
       created_by: 2,
+      deleted_at: null,
+      created_at: '12/12/12 15:00:00',
+      updated_at: '12/12/12 15:00:00',
+      is_defender: false,
+      is_midfielder: false,
+      is_forward: true,
+      is_goalkeeper: false,
+      front_end_position: {
+        name: 'Forward',
+        id: 4,
+      },
+    },
+    {
+      id: 4,
+      name: 'Mohammed ',
+      country_id: 4,
+      club_id: 4,
+      position_id: 4,
+      shirt_number: '12',
+      created_by: 4,
       deleted_at: null,
       created_at: '12/12/12 15:00:00',
       updated_at: '12/12/12 15:00:00',

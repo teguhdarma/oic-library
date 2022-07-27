@@ -11,7 +11,7 @@ export const StateContext = ({ children }) => {
   const [qty, setQty] = useState(1);
 
   let foundProduct;
-  let index;
+ 
 
   const onAdd = (product, quantity) => {
     const checkProductInCart = cartItems.find(
@@ -39,7 +39,7 @@ export const StateContext = ({ children }) => {
       setCartItems([...cartItems, { ...product }]);
     }
 
-    toast.success(`${qty} ${product.name} added to the cart.`);
+    toast.success(`${qty} ${product.title} added to the cart.`);
   };
 
   const onRemove = (product) => {

@@ -47,9 +47,9 @@ function Header({ placeholder }) {
       {/* left */}
       <div
         onClick={() => router.push('/')}
-        className="relative flex items-center h-10 cursor-pointer my-auto"
+        className="relative flex items-center h-16 cursor-pointer my-auto logo w-16"
       >
-        <img src="" alt="My Image" className="logo" />
+        <img src="img/oic-library.png" alt="My Image" className="logo h-12" />
       </div>
       {/* middle search bar*/}
       <div className="flex items-center md:border-2 rounded-full py-2 md:shadow-sm ">

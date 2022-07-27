@@ -29,15 +29,14 @@ export default function Option() {
           <div className="py-1">
             <Menu.Item>
               {({ active }) => (
-                <a
-                  href="/status"
+                <div
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                  借りる本の状態
-                </a>
+                  <Link href="/status"> 借りる本の状態 </Link>
+                </div>
               )}
             </Menu.Item>
             <Menu.Item>
@@ -69,14 +68,14 @@ export default function Option() {
             <form>
               <Menu.Item>
                 {({ active }) => (
-                  <button
+                  <div
                     className={classNames(
                       active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                      'block w-full text-left px-4 py-2 text-sm'
+                      'block px-4 py-2 text-sm'
                     )}
                   >
-                    lisenci
-                  </button>
+                    <Link href="/ask">FAQS</Link>
+                  </div>
                 )}
               </Menu.Item>
             </form>

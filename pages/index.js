@@ -1,41 +1,15 @@
 import Head from 'next/head';
-import { motion } from 'framer-motion';
 import React from 'react';
-import {
-  Header,
-  Banner,
-  Slide,
-  Product,
-  Footer,
-  Simple,
-  FooterBanner,
-} from '../components';
-
+import { Slide, Product, Simple } from '../components';
 import { client } from '../lib/client';
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2,
-    },
-  },
-};
+import { Hero } from '../components/Hero';
+import { Feature } from '../components/Features';
+import { Team } from '../components/Team';
+import New from '../components/New';
+import Articel from '../components/Articel';
+import Link from 'next/link';
 
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
-const Home = ({ products, bannerData, slides }) => {
-  const sliderClick = (slider) => {
-    alert('hello world');
-  };
-
+const Home = ({ products, bannerData, slides, posts }) => {
   return (
     <div>
       <Head>
@@ -45,7 +19,10 @@ const Home = ({ products, bannerData, slides }) => {
       </Head>
 
       <div>
-        <Banner />
+        <Hero />
+      </div>
+      <div>
+        <Feature />
       </div>
       <main className="max-w-7xl mx-auto px-8 sm:px-16 mb-4">
         <section>
@@ -68,7 +45,7 @@ const Home = ({ products, bannerData, slides }) => {
 
         <div className="products-container">
           {products?.map((product) => (
-            <Product key={product._id} product={product} variants={item} />
+            <Product key={product._id} product={product} variants={product} />
           ))}
         </div>
       </section>
@@ -77,14 +54,39 @@ const Home = ({ products, bannerData, slides }) => {
           <div className="products-heading">
             <h2>Category</h2>
           </div>
-
           <Simple slides={slides} />
         </div>
       </section>
       <section>
         <div>
-          <FooterBanner FooterBanner={bannerData && bannerData[0]} />
+          <div className="products-heading">
+            <h2>Articel</h2>
+          </div>
+          {posts?.map((item) => (
+            <Articel key={item._id} post={item} />
+          ))}
+          <div className="text-center mt-10 px-5  font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">
+            <Link href="/blog" aria-label="">
+              See all articles
+            </Link>
+            <svg
+              className="inline-block w-3 ml-2"
+              fill="currentColor"
+              viewBox="0 0 12 12"
+            >
+              <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
+            </svg>
+          </div>
         </div>
+      </section>
+      <section>
+        <div className="products-heading">
+          <h2>What`s a new</h2>
+          <New FooterBanner={bannerData && bannerData[0]} />
+        </div>
+      </section>
+      <section>
+        <Team />
       </section>
     </div>
   );
@@ -96,9 +98,11 @@ export const getServerSideProps = async () => {
   const slides = await client.fetch(slide);
   const bannerquery = '*[_type == "banner"]';
   const bannerData = await client.fetch(bannerquery);
+  const post = '*[_type == "post"][0...3]';
+  const posts = await client.fetch(post);
 
   return {
-    props: { products, bannerData, slides },
+    props: { products, bannerData, slides, posts },
   };
 };
 export default Home;

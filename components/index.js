@@ -6,4 +6,5 @@ export { default as Product } from './Product';
 export { default as Simple } from './Simple';
 export { default as Footer } from './Footer';
 export { default as Signin } from './Signin';
+export { default as Hero } from './Hero';
 export { default as FooterBanner } from './FooterBanner';

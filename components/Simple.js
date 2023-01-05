@@ -27,7 +27,7 @@ const Simple = (props) => {
               <img
                 src={urlFor(slide.image)}
                 layout="fill"
-                className="slider-card-image"
+                className="slider-card-image overflow-hidden bg-fixed opacity-100 hover:opacity-60 transition duration-300 ease-in-out "
               />
 
               <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
@@ -42,15 +42,17 @@ const Simple = (props) => {
                      inline-block
                      py-2
                      px-7
-                     border border-[#5181e0]
+                     mt-3
                      rounded-full
                      text-base text-body-color
+                     text-white
                      font-medium
                      hover:border-primary hover:bg-primary hover:text-blue
                      transition
+                     duration-300 ease-in-out bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:opacity-70
                      "
                     >
-                      View Details
+                      View Detail
                     </a>
                   </motion.button>
                 </div>

@@ -1,24 +1,44 @@
 import React, { useState } from 'react';
-import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import Swal from 'sweetalert2';
 import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
-import { useStateContext } from '../../context/StateContex';
-import { useForm } from 'react-hook-form';
 import PortableText from 'react-portable-text';
-import Description from '../../components/Description';
 
+const features = [
+  { name: 'Origin', description: 'Designed by Good Goods, Inc.' },
+  {
+    name: 'Material',
+    description:
+      'Solid walnut base with rare earth magnets and powder coated steel card cover',
+  },
+  { name: 'Dimensions', description: '6.25" x 3.55" x 1.15"' },
+  {
+    name: 'Finish',
+    description: 'Hand sanded and finished with natural oil',
+  },
+  { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
+  {
+    name: 'Considerations',
+    description:
+      'Made from natural materials. Grain and color vary with each item.',
+  },
+];
 const ProductDetails = ({ product, products }) => {
-  console.log(product);
   const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-
-  const { poster, overview, title } = product;
+    overview,
+    title,
+    image,
+    mainImage,
+    mainImage2,
+    mainImage3,
+    mainImage4,
+    author,
+    cast,
+    cast2,
+    cast3,
+  } = product;
+  console.log(products);
   const [index, setIndex] = useState(0);
-  const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
   const handleBuyNow = () => {
     onAdd(product, qty);
 
@@ -46,28 +66,31 @@ const ProductDetails = ({ product, products }) => {
   return (
     <div>
       <div className="product-detail-container">
-        <div className="product-card">
-          <img
-            src={urlFor(poster)}
-            width={250}
-            height={250}
-            className="rounded-xl  scrollbar-hide h-56 w-80"
-            alt=""
-          />
-          <p className="product-name">{title}</p>
+        <div>
+          <div className="image-container">
+            <img
+              src={urlFor(image && image[index])}
+              className="product-detail-image h-60"
+            />
+          </div>
+          <div className="small-images-container">
+            {image?.map((item, i) => (
+              <img
+                key={i}
+                src={urlFor(item)}
+                className={
+                  i === index ? 'small-image selected-image' : 'small-image'
+                }
+                onMouseEnter={() => setIndex(i)}
+              />
+            ))}
+          </div>
         </div>
         <div className="product-detail-desc">
-          <h1>{title}</h1>
-          <div className="reviews">
-            <div className="flex">
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
-              <AiOutlineStar />
-            </div>
-            <p>{product.popularity}</p>
+          <div className="text-3xl font-extrabold tracking-tight text-gray-800 sm:text-4xl">
+            {title}
           </div>
+
           <div>
             <PortableText
               content={overview}
@@ -89,27 +112,76 @@ const ProductDetails = ({ product, products }) => {
               }}
             />
           </div>
-
-          <div className="buttons">
-            <button
-              type="button"
-              className="add-to-cart"
-              onClick={() => onAdd(product, qty)}
-            >
-              Add to Cart
-            </button>
-            <button type="button" className="buy-now" onClick={handleBuyNow}>
-              borrow now
-            </button>
-          </div>
         </div>
       </div>
       <div>
-        <Description />
+        <div className="bg-white">
+          <div className="max-w-2xl mx-auto py-24 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
+            <div>
+              <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                作品
+              </h2>
+              <p className="mt-4 text-gray-500">
+                The walnut wood card tray is precision milled to perfectly fit a
+                stack of Focus cards. The powder coated steel divider separates
+                active cards from new ones, or can be used to archive important
+                task lists.
+              </p>
+
+              <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+                {features.map((feature) => (
+                  <div
+                    key={feature.name}
+                    className="border-t border-gray-200 pt-4"
+                  >
+                    <dt className="font-medium text-gray-900">
+                      {feature.name}
+                    </dt>
+                    <dd className="mt-2 text-sm text-gray-500">
+                      {feature.description}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+            <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
+              {mainImage2 && (
+                <img
+                  className="bg-gray-100 rounded-lg"
+                  src={urlFor(mainImage)}
+                  alt=""
+                />
+              )}
+              {mainImage3 && (
+                <img
+                  className="bg-gray-100 rounded-lg"
+                  src={urlFor(mainImage3)}
+                  alt=""
+                />
+              )}
+
+              {mainImage4 && (
+                <img
+                  className="bg-gray-100 rounded-lg"
+                  src={urlFor(mainImage4)}
+                  alt=""
+                />
+              )}
+              {mainImage && (
+                <img
+                  className="bg-gray-100 rounded-lg"
+                  src={urlFor(mainImage2)}
+                  alt=""
+                />
+              )}
+            </div>
+          </div>
+        </div>
       </div>
+      <section></section>
 
       <div className="products-heading ">
-        <h2 className="br-4">You may also like</h2>
+        <h2 className="br-4">他の学科</h2>
         <div className="marquee">
           <div className="maylike-products-container track">
             {products.map((item) => (
@@ -119,95 +191,6 @@ const ProductDetails = ({ product, products }) => {
         </div>
       </div>
       {/* form */}
-      <hr className="max-w-lg my-5 mx-auto border border-green-500" />
-      {submitted ? (
-        <div className="flex flex-col py-10 my-10 bg-yellow-500 text-white max-w-2xl mx-auto">
-          <h3 className="mx-auto text-3xl mb-4">
-            terima kasih telah memberikan komen
-          </h3>
-          <p className="mx-auto">sudah di terima </p>
-        </div>
-      ) : (
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col p-5 max-w-2xl mx-auto mb-10"
-          action=""
-        >
-          <h3 className="text-sm text-green-500">
-            berikan komen untuk rumah ini
-          </h3>
-          <h4 className="text-3xl font-bold">tingalkan komen di bawah</h4>
-          <hr className="py-3 mt-2" />
-          <input
-            {...register('_id')}
-            type="hidden"
-            name="_id"
-            value={product._id}
-          />
-          <label className="block mb-5" htmlFor="">
-            <span className="text-gray-700">Name</span>
-            <input
-              {...register('name', { required: true })}
-              className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-yellow-500 outline-none focus:ring "
-              placeholder="jhon applessed"
-              type="text"
-            />
-          </label>
-          <label className="block mb-5" htmlFor="">
-            <span className="text-gray-700">email</span>
-            <input
-              {...register('email', { required: true })}
-              className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-yellow-500 outline-none focus:ring "
-              placeholder="jhon applessed"
-              type="email"
-            />
-          </label>
-          <label className="block mb-5" htmlFor="">
-            <span className="text-gray-700">comment</span>
-            <textarea
-              {...register('comment', { required: true })}
-              className="shadow border rounded py-2 px-3 form-textarea mt-1 block w-full ring-yellow-500 outline-none focus:ring"
-              placeholder="jhon appleseed "
-              rows={9}
-            />
-          </label>
-          {/* error will return when field validation fails */}
-          <div className="flex flex-col p-5">
-            {errors.name && (
-              <span className="text-red-500">the name field is required</span>
-            )}
-            {errors.comment && (
-              <span className="text-red-500">
-                the comment field is required
-              </span>
-            )}
-            {errors.email && (
-              <span className="text-red-500">
-                the comment field is required
-              </span>
-            )}
-          </div>
-
-          <input
-            type="submit"
-            className="shadow bg-green-500 hover:bg-green-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer"
-          />
-        </form>
-      )}
-      {/* comment */}
-      <div className="flex flex-col p-10 my-10 max-w-2xl mx-auto shadow-yellow-500 shadow space-y-2">
-        <h3 className="text-4xl">Comment</h3>
-        <hr className="pb-2" />
-        {product.comments.map((data) => (
-          <div key={data._id}>
-            <p>
-              <span className="text-yellow-500">{data.name}</span>:
-              {data.comment}
-              <span className="text-gray-500 "></span>
-            </p>
-          </div>
-        ))}
-      </div>
     </div>
   );
 };
@@ -237,11 +220,16 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params: { slug } }) => {
   const query = `*[_type == "movie" && slug.current == '${slug}'][0]{
     _id,
-    poster,
-    overview,
-    popularity,
     title,
-    'comments': *[_type == "comment" && post._ref == ^._id],
+    overview,
+    mainImage,
+      mainImage2,
+      mainImage3,
+      mainImage4,
+    image,
+    'cast': castMembers[].person->name,
+    'cast2': castMembers[].characterName,
+    'cast3': castMembers[].person->image,
   }
   `;
   const productsQuery = '*[_type == "movie"]';

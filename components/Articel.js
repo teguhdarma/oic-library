@@ -8,7 +8,7 @@ const Articel = ({
       <div className="md:flex">
         <div className="md:shrink-0">
           <img
-            className="h-48 w-full object-cover md:h-full md:w-48"
+            className="h-48 w-full object-cover md:h-full md:w-48 max-w-xs hover:scale-110 transition duration-300 ease-in-out "
             src={urlFor(mainImage)}
             alt="Man looking at item at a store"
           />

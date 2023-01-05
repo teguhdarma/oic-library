@@ -1,4 +1,4 @@
-const Footer = () => {
+export default function Footer() {
   return (
     <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full  md:px-24 lg:px-8 bg-slate-100 border-t">
       <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
@@ -244,5 +244,4 @@ const Footer = () => {
       </div>
     </div>
   );
-};
-export default Footer;
+}

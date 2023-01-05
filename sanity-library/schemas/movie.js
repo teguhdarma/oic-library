@@ -12,6 +12,48 @@ export default {
       type: 'string',
     },
     {
+      name: 'image',
+      title: 'Image',
+      type: 'array',
+      of: [{ type: 'image' }],
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'mainImage',
+      title: 'Main image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+
+    {
+      name: 'mainImage2',
+      title: 'Main image2',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'mainImage3',
+      title: 'Main image3',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'mainImage4',
+      title: 'Main image4',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -21,25 +63,20 @@ export default {
       },
     },
     {
+      name: 'author',
+      title: 'Author',
+      type: 'array',
+      of: [{ type: 'author' }],
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'overview',
       title: 'Overview',
       type: 'blockContent',
     },
-    {
-      name: 'releaseDate',
-      title: 'Release date',
-      type: 'datetime',
-    },
-    {
-      name: 'externalId',
-      title: 'External ID',
-      type: 'number',
-    },
-    {
-      name: 'popularity',
-      title: 'Popularity',
-      type: 'number',
-    },
+
     {
       name: 'poster',
       title: 'Poster Image',
@@ -74,8 +111,14 @@ export default {
       media: 'poster',
       castName0: 'castMembers.0.person.name',
       castName1: 'castMembers.1.person.name',
+      author: 'author.name',
+      media: 'mainImage',
     },
     prepare(selection) {
+      const { author } = selection;
+      return Object.assign({}, selection, {
+        subtitle: author && `by ${author}`,
+      });
       const year = selection.date && selection.date.split('-')[0];
       const cast = [selection.castName0, selection.castName1]
         .filter(Boolean)

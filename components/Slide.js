@@ -9,7 +9,7 @@ const Slide = ({ product: { poster, title, slug } }) => {
         <div className="cursor-pointer hover:scale-105 transform transition duration-300 ease-out scrollbar-hide ">
           <div className="relative h-80 w-80  scrollbar-hide">
             <img
-              src={urlFor(poster)}
+              src="/"
               alt={poster[0]?.alternativeText}
               layout="fill"
               className="rounded-xl  scrollbar-hide h-80 w-80"

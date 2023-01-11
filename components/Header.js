@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -34,59 +35,69 @@ export const Header = () => {
         </div>
         <ul className="flex items-center hidden space-x-8 lg:flex">
           <li>
-            <div
-              href="/"
+            <a
+              href="#about"
               aria-label="Our product"
               title="Our product"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              About
-            </div>
+              アバウト
+            </a>
           </li>
           <li>
-            <div
-              href="/"
+            <a
+              href="#colab"
               aria-label="Our product"
               title="Our product"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               コラボ学科
-            </div>
+            </a>
           </li>
           <li>
-            <div
-              href="/"
+            <a
+              href="#table"
               aria-label="Product pricing"
               title="Product pricing"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               テーブル
-            </div>
+            </a>
           </li>
           <li>
-            <div
-              href="/"
+            <a
+              href="#articel"
               aria-label="About us"
               title="About us"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              Articel
-            </div>
+              アーティクル
+            </a>
           </li>
           <li>
-            <div
-              href="/"
+            <a
+              href="#map"
               aria-label="About us"
               title="About us"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              map
-            </div>
+              マップ
+            </a>
+          </li>
+          <li>
+            <a
+              href="#download"
+              aria-label="About us"
+              title="About us"
+              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+            >
+              ダウンロード
+            </a>
           </li>
         </ul>
         <ul className="flex items-center hidden space-x-8 lg:flex">
           <li>
-            <div
+            <a
               className="inline-flex items-center justify-center h-12
              px-6 font-medium tracking-wide text-white transition duration-200
              rounded shadow-md bg-deep-purple-accent-400
@@ -96,7 +107,7 @@ export const Header = () => {
               title="Sign up"
             >
               <Link href="/faq">FAQs</Link>
-            </div>
+            </a>
           </li>
         </ul>
         <div className="lg:hidden">

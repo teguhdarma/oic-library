@@ -76,6 +76,16 @@ export const Header = () => {
           </li>
           <li>
             <a
+              href="#haishin"
+              aria-label="About us"
+              title="About us"
+              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+            >
+              配信
+            </a>
+          </li>
+          <li>
+            <a
               href="#map"
               aria-label="About us"
               title="About us"

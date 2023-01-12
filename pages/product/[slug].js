@@ -67,10 +67,10 @@ const ProductDetails = ({ product, products }) => {
     <div>
       <div className="product-detail-container">
         <div>
-          <div className="image-container">
+          <div>
             <img
               src={urlFor(image && image[index])}
-              className="product-detail-image h-60"
+              className="product-detail-image h-60 w-80"
             />
           </div>
           <div className="small-images-container">

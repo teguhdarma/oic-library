@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import Footer from './Footer';
 import { Header } from './Header';
@@ -5,9 +6,6 @@ import { Header } from './Header';
 const Layout = ({ children }) => {
   return (
     <div>
-      <header>
-        <Header />
-      </header>
       <main>{children}</main>
       <footer className="mt-12">
         <Footer />

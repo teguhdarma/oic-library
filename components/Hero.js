@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import Scene from './Scene';
-import Link from 'next/link';
+import { motion } from 'framer-motion';
 export default function Hero() {
   return (
     <div className="relative px-4 pt-16 mx-auto lg:py-32 md:px-8 xl:px-20 sm:max-w-xl md:max-w-full">
@@ -15,17 +15,16 @@ export default function Hero() {
               </p>
             </div>
             <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-              The quick, brown fox
+              OICの多様な学科群がある
               <br className="hidden md:block" />
-              jumps over{' '}
+              からこそ{' '}
               <span className="inline-block text-deep-purple-accent-400">
-                a lazy dog
+                できる
               </span>
             </h2>
             <p className="text-base text-gray-700 md:text-lg">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae. explicabo.
+              ITを活用するビジネス系とITを生み出す情報系が
+              スクラムを組み、変化の激しい時代の未来を見据えた、新しい業界の姿を考え提案します。
             </p>
           </div>
           <div className="flex flex-col items-center md:flex-row"></div>

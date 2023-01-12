@@ -29,7 +29,7 @@ const New = ({ FooterBanner: { product, buttonText, image, desc } }) => {
             {product}
           </h5>
           <p className="mb-5 text-gray-800">{desc}</p>
-          <div className="flex items-center">
+          <div className="flex items-center justify-center">
             <button
               type="submit"
               className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"

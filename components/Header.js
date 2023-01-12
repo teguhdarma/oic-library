@@ -169,7 +169,7 @@ export const Header = () => {
                         <rect x="14" y="11" width="7" height="12" />
                       </svg>
                       <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                        Company
+                        OIC
                       </span>
                     </div>
                   </div>
@@ -192,44 +192,74 @@ export const Header = () => {
                 <nav>
                   <ul className="space-y-4">
                     <li>
-                      <div
-                        href="/"
+                      <a
+                        href="#about"
                         aria-label="Our product"
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Product
-                      </div>
+                        アバウト
+                      </a>
                     </li>
                     <li>
-                      <div
-                        href="/"
+                      <a
+                        href="#colab"
                         aria-label="Our product"
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Features
-                      </div>
+                        コラボ学科
+                      </a>
                     </li>
                     <li>
-                      <div
-                        href="/"
+                      <a
+                        href="#table"
                         aria-label="Product pricing"
                         title="Product pricing"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Pricing
-                      </div>
+                        テーブル
+                      </a>
                     </li>
                     <li>
-                      <div
-                        href="/"
+                      <a
+                        href="#articel"
                         aria-label="About us"
                         title="About us"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        About us
-                      </div>
+                        アーティクル
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#haishin"
+                        aria-label="About us"
+                        title="About us"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                      >
+                        配信
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#map"
+                        aria-label="About us"
+                        title="About us"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                      >
+                        マップ
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#download"
+                        aria-label="About us"
+                        title="About us"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                      >
+                        ダウンロード
+                      </a>
                     </li>
                     <li>
                       <div

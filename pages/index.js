@@ -12,8 +12,9 @@ import Crisasi from '../components/Crisasi';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Header } from '../components/Header';
+import { Slide } from '../components';
 
-const Home = ({ products, bannerData }) => {
+const Home = ({ products, bannerData, slides }) => {
   return (
     <div>
       <Head>
@@ -39,6 +40,15 @@ const Home = ({ products, bannerData }) => {
         <Hero />
       </div>
       <section className="container flex items-center justify-center h-screen m-auto mb-12 bg-fixed bg-center bg-cover custom-img h-60 "></section>
+      <section>
+        <div className="products-heading">
+          <h2>学科</h2>
+          <p>speakers of many variationals</p>
+        </div>
+        <div className="flex space-x-3 justify-center overflow-scroll scrollbar-hide p-3 scrollbar-hide">
+          <Slide slides={slides} />
+        </div>
+      </section>
 
       <section id="colab">
         <div className="products-heading">

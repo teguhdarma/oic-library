@@ -12,6 +12,51 @@ export default {
       type: 'string',
     },
     {
+      name: 'name',
+      title: 'name',
+      type: 'string',
+    },
+    {
+      name: 'sakuhinnamae1',
+      title: 'sakuhinnamae1',
+      type: 'string',
+    },
+    {
+      name: 'sakuhinnamae2',
+      title: 'sakuhinnamae2',
+      type: 'string',
+    },
+    {
+      name: 'sakuhinnamae3',
+      title: 'sakuhinnamae3',
+      type: 'string',
+    },
+
+    {
+      name: 'sakuhinnamae4',
+      title: 'sakuhinnamae4',
+      type: 'string',
+    },
+
+    {
+      name: 'sakuhinnamae5',
+      title: 'sakuhinnamae5',
+      type: 'string',
+    },
+
+    {
+      name: 'sakuhinnamae6',
+      title: 'sakuhinnamae6',
+      type: 'string',
+    },
+
+    {
+      name: 'sakuhinnamae7',
+      title: 'sakuhinnamae7',
+      type: 'string',
+    },
+
+    {
       name: 'image',
       title: 'Image',
       type: 'array',
@@ -21,8 +66,8 @@ export default {
       },
     },
     {
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'mainImage1',
+      title: 'Main image1',
       type: 'image',
       options: {
         hotspot: true,
@@ -54,6 +99,30 @@ export default {
       },
     },
     {
+      name: 'mainImage5',
+      title: 'Main image5',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'mainImage6',
+      title: 'Main image6',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'mainImage7',
+      title: 'Main image7',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -74,6 +143,76 @@ export default {
     {
       name: 'overview',
       title: 'Overview',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinhaikei1',
+      title: 'Sakuhinhaikei1',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinhaikei2',
+      title: 'Sakuhinhaikei2',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinhaikei3',
+      title: 'Sakuhinhaikei3',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinhaikei4',
+      title: 'Sakuhinhaikei4',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinhaikei5',
+      title: 'Sakuhinhaikei5',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinhaikei6',
+      title: 'Sakuhinhaikei6',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinhaikei7',
+      title: 'Sakuhinhaikei7',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinsetsumei1',
+      title: 'Sakuhinsetsumei1',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinsetsumei2',
+      title: 'Sakuhinsetsumei2',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinsetsumei3',
+      title: 'Sakuhinsetsumei3',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinsetsumei4',
+      title: 'Sakuhinsetsumei4',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinsetsumei5',
+      title: 'Sakuhinsetsumei5',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinsetsumei6',
+      title: 'Sakuhinsetsumei6',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinsetsumei7',
+      title: 'Sakuhinsetsumei7',
       type: 'blockContent',
     },
 

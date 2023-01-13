@@ -2,7 +2,7 @@ import React from 'react';
 import { urlFor } from '../lib/client';
 import Link from 'next/link';
 
-const Product = ({ product: { poster, title, slug } }) => {
+const Product = ({ product: { poster, slug, name } }) => {
   return (
     <div>
       <Link href={`/product/${slug.current}`}>
@@ -14,7 +14,7 @@ const Product = ({ product: { poster, title, slug } }) => {
             className="rounded-xl  scrollbar-hide h-64 w-64"
             alt=""
           />
-          <p className="product-name">{title}</p>
+          <p className="product-name">{name}</p>
         </div>
       </Link>
     </div>

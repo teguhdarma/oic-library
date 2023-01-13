@@ -21,14 +21,13 @@ function Crisasi() {
                 </p>
               </div>
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                チラシダウンロード
+                チラシのダウンロード
                 <br className="hidden md:block" />
                 <span className="inline-block text-deep-purple-accent-400">
-                  したいかた
+                  こちらです
                 </span>
               </h2>
               <p className="text-base text-gray-700 md:text-lg">
-                チラシの横に記載して頂きたい文章
                 卒業研究発表会のチラシになります。
               </p>
             </div>

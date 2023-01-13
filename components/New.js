@@ -34,7 +34,7 @@ const New = ({ FooterBanner: { product, buttonText, image, desc } }) => {
               type="submit"
               className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
             >
-              <Link href="https://youtu.be/6sQLf_ASXbI">{buttonText}</Link>
+              <Link href="">{buttonText}</Link>
             </button>
           </div>
         </div>

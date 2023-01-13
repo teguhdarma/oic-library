@@ -27,6 +27,7 @@ const ProductDetails = ({ product, products }) => {
   const {
     overview,
     title,
+    name,
     image,
     mainImage,
     mainImage2,
@@ -222,6 +223,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
     _id,
     title,
     overview,
+    name,
     mainImage,
       mainImage2,
       mainImage3,

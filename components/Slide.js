@@ -49,7 +49,7 @@ const Slide = (props) => {
                      transition
                      "
                     >
-                      View Details
+                      詳しく見る
                     </a>
                   </motion.button>
                 </div>

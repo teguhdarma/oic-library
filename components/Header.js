@@ -14,7 +14,7 @@ export const Header = () => {
           title="Company"
           className="inline-flex items-center"
         >
-          <svg
+          {/* <svg
             className="w-8 text-deep-purple-accent-400"
             viewBox="0 0 24 24"
             strokeLinejoin="round"
@@ -28,9 +28,10 @@ export const Header = () => {
             <rect x="3" y="17" width="7" height="6" />
             <rect x="14" y="1" width="7" height="6" />
             <rect x="14" y="11" width="7" height="12" />
-          </svg>
+          </svg> */}
+
           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-            OIC
+            <img src="img/oic.png" alt="" className=" h-16" />
           </span>
         </div>
         <ul className="flex items-center hidden space-x-8 lg:flex">
@@ -41,7 +42,7 @@ export const Header = () => {
               title="Our product"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              アバウト
+              about
             </a>
           </li>
           <li>
@@ -54,7 +55,7 @@ export const Header = () => {
               コラボ学科
             </a>
           </li>
-          <li>
+          {/* <li>
             <a
               href="#table"
               aria-label="Product pricing"
@@ -63,7 +64,7 @@ export const Header = () => {
             >
               テーブル
             </a>
-          </li>
+          </li> */}
           <li>
             <a
               href="#articel"
@@ -71,20 +72,20 @@ export const Header = () => {
               title="About us"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              アーティクル
+              OICのツイッター
             </a>
           </li>
-          <li>
+          {/* <li>
             <a
-              href="#haishin"
+              href="#hairpin"
               aria-label="About us"
               title="About us"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               配信
             </a>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <a
               href="#map"
               aria-label="About us"
@@ -93,7 +94,7 @@ export const Header = () => {
             >
               マップ
             </a>
-          </li>
+          </li> */}
           <li>
             <a
               href="#download"
@@ -105,21 +106,7 @@ export const Header = () => {
             </a>
           </li>
         </ul>
-        <ul className="flex items-center hidden space-x-8 lg:flex">
-          <li>
-            <a
-              className="inline-flex items-center justify-center h-12
-             px-6 font-medium tracking-wide text-white transition duration-200
-             rounded shadow-md bg-deep-purple-accent-400
-             hover:bg-deep-purple-accent-700 focus:shadow-outline
-             focus:outline-none"
-              aria-label="Sign up"
-              title="Sign up"
-            >
-              <Link href="/faq">FAQs</Link>
-            </a>
-          </li>
-        </ul>
+        <ul className="flex items-center hidden space-x-8 lg:flex"></ul>
         <div className="lg:hidden">
           <button
             aria-label="Open Menu"
@@ -198,7 +185,7 @@ export const Header = () => {
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        アバウト
+                        about
                       </a>
                     </li>
                     <li>
@@ -211,7 +198,7 @@ export const Header = () => {
                         コラボ学科
                       </a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a
                         href="#table"
                         aria-label="Product pricing"
@@ -220,7 +207,7 @@ export const Header = () => {
                       >
                         テーブル
                       </a>
-                    </li>
+                    </li> */}
                     <li>
                       <a
                         href="#articel"
@@ -228,10 +215,10 @@ export const Header = () => {
                         title="About us"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        アーティクル
+                        OICのツイッター
                       </a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a
                         href="#haishin"
                         aria-label="About us"
@@ -240,8 +227,8 @@ export const Header = () => {
                       >
                         配信
                       </a>
-                    </li>
-                    <li>
+                    </li> */}
+                    {/* <li>
                       <a
                         href="#map"
                         aria-label="About us"
@@ -250,7 +237,7 @@ export const Header = () => {
                       >
                         マップ
                       </a>
-                    </li>
+                    </li> */}
                     <li>
                       <a
                         href="#download"
@@ -260,15 +247,6 @@ export const Header = () => {
                       >
                         ダウンロード
                       </a>
-                    </li>
-                    <li>
-                      <div
-                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                        aria-label="Sign up"
-                        title="Sign up"
-                      >
-                        <Link href="/faq">FAQs</Link>
-                      </div>
                     </li>
                   </ul>
                 </nav>

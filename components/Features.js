@@ -33,9 +33,8 @@ function Features() {
                 <h6 className="font-semibold leading-5">時間</h6>
               </div>
               <p className="mb-2 text-sm text-gray-900">
-                令和4年度 卒業研究合同発表会・ 制作展
-                2023年1月24日(火)・【発表会】 10:20〜16:30 【展示会】
-                10:00〜19:00
+                令和4年度 卒業研究発表会・ 制作展 2023年1月24日(火)・【発表会】
+                10:15〜16:00 【展示会】 10:00〜18:30
               </p>
               <div className="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"></div>
             </div>
@@ -66,7 +65,6 @@ function Features() {
               </div>
               <p className="mb-2 text-sm text-gray-900">
                 【 会 場 】 イオン会場１階未来スクエア
-                （一部OIC1階会場にて展示）
               </p>
               <div className="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"></div>
             </div>
@@ -94,11 +92,13 @@ function Features() {
                   </svg>
                 </div>
                 <h6 className="font-semibold leading-5">
-                  「卒業研究合同発表会・制作展」とは？
+                  卒業研究発表会 とは？
                 </h6>
               </div>
               <p className="mb-2 text-sm text-gray-900">
-                専門学校岡山情報ビジネス学院の卒業年次の学生がそれぞれの分野で学んできたことを研究し、発表する会です。
+                専門学校岡山情報ビジネス学院の卒業年次の学生が成果を発表する会です。
+                今年は「× I
+                T」というテーマのもと、複数の学科で卒業研究を行いました。
               </p>
               <div className="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"></div>
             </div>

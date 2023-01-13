@@ -33,8 +33,9 @@ function Features() {
                 <h6 className="font-semibold leading-5">時間</h6>
               </div>
               <p className="mb-2 text-sm text-gray-900">
-                令和4年度 卒業研究発表会・ 制作展 2023年1月24日(火)・【発表会】
-                10:15〜16:00 【展示会】 10:00〜18:30
+                令和4年度 卒業研究発表会 <br /> 2023年1月24日(火) <br />
+                【発表会】 10:15〜16:00 <br />
+                【展示会】 10:00〜18:30
               </p>
               <div className="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"></div>
             </div>
@@ -96,7 +97,9 @@ function Features() {
                 </h6>
               </div>
               <p className="mb-2 text-sm text-gray-900">
-                専門学校岡山情報ビジネス学院の卒業年次の学生が成果を発表する会です。
+                専門学校岡山情報ビジネス学院の卒業年次の
+                <br />
+                学生が成果を発表する会です。 <br />
                 今年は「× I
                 T」というテーマのもと、複数の学科で卒業研究を行いました。
               </p>

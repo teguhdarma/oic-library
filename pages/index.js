@@ -44,7 +44,6 @@ const Home = ({ products, bannerData, slides }) => {
       <section>
         <div className="products-heading">
           <h2>学科</h2>
-          <p>speakers of many variationals</p>
         </div>
         <div className="flex space-x-3 justify-center overflow-scroll scrollbar-hide p-3 scrollbar-hide">
           <Slide slides={slides} />
@@ -57,7 +56,7 @@ const Home = ({ products, bannerData, slides }) => {
         </div>
         <div className="products-container">
           {products.map((post) => (
-            <Link key={post._id} href="">
+            <Link key={post._id} href={`/product/${post.slug.current}`}>
               <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
                   <img
@@ -77,7 +76,7 @@ const Home = ({ products, bannerData, slides }) => {
                     href="#"
                     className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                   >
-                    Comming Soon!
+                    詳しく見る→
                   </a>
                 </div>
               </div>

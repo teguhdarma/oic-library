@@ -11,6 +11,78 @@ export default {
       title: 'Title',
       type: 'string',
     },
+
+    {
+      name: 'tipesetsumei1',
+      title: 'Tipesetsumei1',
+      type: 'string',
+    },
+    {
+      name: 'tipesetsumei2',
+      title: 'Tipesetsumei2',
+      type: 'string',
+    },
+    {
+      name: 'tipesetsumei3',
+      title: 'Tipesetsumei3',
+      type: 'string',
+    },
+    {
+      name: 'tipesetsumei4',
+      title: 'Tipesetsumei4',
+      type: 'string',
+    },
+    {
+      name: 'tipesetsumei5',
+      title: 'Tipesetsumei5',
+      type: 'string',
+    },
+    {
+      name: 'tipesetsumei6',
+      title: 'Tipesetsumei6',
+      type: 'string',
+    },
+    {
+      name: 'tipesetsumei7',
+      title: 'Tipesetsumei7',
+      type: 'string',
+    },
+    {
+      name: 'tipehaikei1',
+      title: 'Tipehaikei1',
+      type: 'string',
+    },
+    {
+      name: 'tipehaikei2',
+      title: 'Tipehaikei2',
+      type: 'string',
+    },
+    {
+      name: 'tipehaikei3',
+      title: 'Tipehaikei3',
+      type: 'string',
+    },
+    {
+      name: 'tipehaikei4',
+      title: 'Tipehaikei4',
+      type: 'string',
+    },
+    {
+      name: 'tipehaikei5',
+      title: 'Tipehaikei5',
+      type: 'string',
+    },
+    {
+      name: 'tipehaikei6',
+      title: 'Tipehaikei6',
+      type: 'string',
+    },
+    {
+      name: 'tipehaikei7',
+      title: 'Tipehaikei7',
+      type: 'string',
+    },
+
     {
       name: 'name',
       title: 'name',
@@ -223,24 +295,6 @@ export default {
       options: {
         hotspot: true,
       },
-    },
-    {
-      name: 'castMembers',
-      title: 'Cast Members',
-      type: 'array',
-      of: [{ type: 'castMember' }],
-    },
-    {
-      name: 'tipe',
-      title: 'tipe',
-      type: 'reference',
-      to: { type: 'tipe' },
-    },
-    {
-      name: 'crewMembers',
-      title: 'Crew Members',
-      type: 'array',
-      of: [{ type: 'crewMember' }],
     },
   ],
   preview: {

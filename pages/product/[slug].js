@@ -4,39 +4,69 @@ import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
 import PortableText from 'react-portable-text';
 
-const features = [
-  { name: 'Origin', description: 'Designed by Good Goods, Inc.' },
-  {
-    name: 'Material',
-    description:
-      'Solid walnut base with rare earth magnets and powder coated steel card cover',
-  },
-  { name: 'Dimensions', description: '6.25" x 3.55" x 1.15"' },
-  {
-    name: 'Finish',
-    description: 'Hand sanded and finished with natural oil',
-  },
-  { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
-  {
-    name: 'Considerations',
-    description:
-      'Made from natural materials. Grain and color vary with each item.',
-  },
-];
+import PostBody from '../../components/post-body';
+import PostBody2 from '../../components/post-body2';
+import PostBody3 from '../../components/post-body3';
+import PostBody4 from '../../components/post-body4';
+import PostBody5 from '../../components/post-body5';
+import PostBody6 from '../../components/post-body6';
+import PostBody7 from '../../components/post-body7';
+import PostRes from '../../components/post-res';
+import PostRes2 from '../../components/post-res2';
+import PostRes3 from '../../components/post-res3';
+import PostRes4 from '../../components/post-res4';
+import PostRes5 from '../../components/post-res5';
+import PostRes6 from '../../components/post-res6';
+import PostRes7 from '../../components/post-res7';
 const ProductDetails = ({ product, products }) => {
   const {
-    overview,
+    _id,
     title,
+    tipesetsumei1,
+    tipesetsumei2,
+    tipesetsumei3,
+    tipesetsumei4,
+    tipesetsumei5,
+    tipesetsumei6,
+    tipesetsumei7,
+    tipehaikei1,
+    tipehaikei2,
+    tipehaikei3,
+    tipehaikei4,
+    tipehaikei5,
+    tipehaikei6,
+    tipehaikei7,
+    overview,
+    sakuhinnamae1,
+    sakuhinnamae2,
+    sakuhinnamae3,
+    sakuhinnamae4,
+    sakuhinnamae5,
+    sakuhinnamae6,
+    sakuhinnamae7,
+    sakuhinsetsumei1,
+    sakuhinsetsumei2,
+    sakuhinsetsumei3,
+    sakuhinsetsumei4,
+    sakuhinsetsumei5,
+    sakuhinsetsumei6,
+    sakuhinsetsumei7,
+    sakuhinhaikei1,
+    sakuhinhaikei2,
+    sakuhinhaikei3,
+    sakuhinhaikei4,
+    sakuhinhaikei5,
+    sakuhinhaikei6,
+    sakuhinhaikei7,
     name,
-    image,
-    mainImage,
+    mainImage1,
     mainImage2,
     mainImage3,
     mainImage4,
-    author,
-    cast,
-    cast2,
-    cast3,
+    mainImage5,
+    mainImage6,
+    mainImage7,
+    image,
   } = product;
   console.log(products);
   const [index, setIndex] = useState(0);
@@ -115,71 +145,309 @@ const ProductDetails = ({ product, products }) => {
           </div>
         </div>
       </div>
-      <div>
-        <div className="bg-white">
-          <div className="max-w-2xl mx-auto py-24 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
-            <div>
-              <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                作品
-              </h2>
-              <p className="mt-4 text-gray-500">
-                The walnut wood card tray is precision milled to perfectly fit a
-                stack of Focus cards. The powder coated steel divider separates
-                active cards from new ones, or can be used to archive important
-                task lists.
-              </p>
 
-              <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-                {features.map((feature) => (
+      {/* Container for demo purpose */}
+      <div className="container my-24 px-6 mx-auto">
+        {/* Section: Design Block */}
+        <section className="mb-32 text-gray-800">
+          <div className="products-heading ">
+            <h2 className="br-4">作品</h2>
+          </div>
+          <div className="flex flex-wrap mb-12">
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6 mb-6 lg:mb-0">
+              <div
+                className="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
+                style={{ backgroundPosition: '50%' }}
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+              >
+                {mainImage1 && (
+                  <img
+                    className="bg-gray-100 rounded-lg w-full min-h-full"
+                    src={urlFor(mainImage1)}
+                    alt=""
+                  />
+                )}
+                <a href="#!">
                   <div
-                    key={feature.name}
-                    className="border-t border-gray-200 pt-4"
-                  >
-                    <dt className="font-medium text-gray-900">
-                      {feature.name}
-                    </dt>
-                    <dd className="mt-2 text-sm text-gray-500">
-                      {feature.description}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+                    className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                    style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}
+                  />
+                </a>
+              </div>
             </div>
-            <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-              {mainImage2 && (
-                <img
-                  className="bg-gray-100 rounded-lg"
-                  src={urlFor(mainImage)}
-                  alt=""
-                />
-              )}
-              {mainImage3 && (
-                <img
-                  className="bg-gray-100 rounded-lg"
-                  src={urlFor(mainImage3)}
-                  alt=""
-                />
-              )}
-
-              {mainImage4 && (
-                <img
-                  className="bg-gray-100 rounded-lg"
-                  src={urlFor(mainImage4)}
-                  alt=""
-                />
-              )}
-              {mainImage && (
-                <img
-                  className="bg-gray-100 rounded-lg"
-                  src={urlFor(mainImage2)}
-                  alt=""
-                />
-              )}
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6">
+              <h3 className="text-2xl font-bold mb-4">{sakuhinnamae1}</h3>
+              <div className="text-red-600 text-sm mb-4 flex items-center font-medium">
+                {tipesetsumei1}
+              </div>
+              <p className="text-gray-500 mb-6">
+                <PostBody content={sakuhinsetsumei1} />
+              </p>
+              <div className="text-red-600 text-sm mb-4 flex items-center font-medium">
+                {tipehaikei1}
+              </div>
+              <p className="text-gray-500">
+                <PostRes content={sakuhinhaikei1} />
+              </p>
             </div>
           </div>
-        </div>
+          <div className="flex flex-wrap lg:flex-row-reverse mb-12">
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6 mb-6 lg:mb-0">
+              <div
+                className="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
+                style={{ backgroundPosition: '50%' }}
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+              >
+                {mainImage2 && (
+                  <img
+                    className="bg-gray-100 rounded-lg w-full "
+                    src={urlFor(mainImage2)}
+                    alt=""
+                  />
+                )}
+
+                <a href="#!">
+                  <div
+                    className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                    style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}
+                  />
+                </a>
+              </div>
+            </div>
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6">
+              <h3 className="text-2xl font-bold mb-4">{sakuhinnamae2}</h3>
+              <div className="text-blue-600 text-sm mb-4 flex items-center font-medium">
+                {tipesetsumei2}
+              </div>
+              <p className="text-gray-500">
+                <PostBody2 content={sakuhinsetsumei2} />
+              </p>
+              <div className="text-blue-600 text-sm mb-4 flex items-center mt-4 font-medium">
+                {tipehaikei2}
+              </div>
+              <p className="text-gray-500">
+                <PostRes2 content={sakuhinhaikei2} />
+              </p>
+            </div>
+          </div>
+        </section>
+        {/* Section: Design Block */}
       </div>
-      <section></section>
+      {/* Container for demo purpose */}
+
+      {/* Section: Design Block */}
+      <div className="container my-24 px-6 mx-auto">
+        <section className="mb-32 text-gray-800">
+          <div className="flex flex-wrap mb-12">
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6 mb-6 lg:mb-0">
+              <div
+                className="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
+                style={{ backgroundPosition: '50%' }}
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+              >
+                {mainImage3 && (
+                  <img
+                    className="bg-gray-100 rounded-lg w-full min-h-full"
+                    src={urlFor(mainImage3)}
+                    alt=""
+                  />
+                )}
+                <a href="#!">
+                  <div
+                    className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                    style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}
+                  />
+                </a>
+              </div>
+            </div>
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6">
+              <h3 className="text-2xl font-bold mb-4">{sakuhinnamae3}</h3>
+              <div className="text-red-600 text-sm mb-4 flex items-center font-medium">
+                {tipesetsumei3}
+              </div>
+              <p className="text-gray-500 mb-6">
+                <PostBody3 content={sakuhinsetsumei3} />
+              </p>
+              <div className="text-red-600 text-sm mb-4 flex items-center font-medium">
+                {tipehaikei3}
+              </div>
+              <p className="text-gray-500">
+                <PostRes3 content={sakuhinhaikei3} />
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-wrap lg:flex-row-reverse mb-12">
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6 mb-6 lg:mb-0">
+              <div
+                className="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
+                style={{ backgroundPosition: '50%' }}
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+              >
+                {mainImage2 && (
+                  <img
+                    className="bg-gray-100 rounded-lg w-full "
+                    src={urlFor(mainImage4)}
+                    alt=""
+                  />
+                )}
+
+                <a href="#!">
+                  <div
+                    className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                    style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}
+                  />
+                </a>
+              </div>
+            </div>
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6">
+              <h3 className="text-2xl font-bold mb-4">{sakuhinnamae4}</h3>
+              <div className="text-blue-600 text-sm mb-4 flex items-center font-medium">
+                {tipesetsumei4}
+              </div>
+              <p className="text-gray-500">
+                <PostBody4 content={sakuhinsetsumei4} />
+              </p>
+              <div className="text-blue-600 text-sm mb-4 flex items-center mt-4 font-medium">
+                {tipehaikei2}
+              </div>
+              <p className="text-gray-500">
+                <PostRes4 content={sakuhinhaikei2} />
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      {/* Section: Design Block */}
+
+      {/* Section: Design Block */}
+      <div className="container my-24 px-6 mx-auto">
+        <section className="mb-32 text-gray-800">
+          <div className="flex flex-wrap mb-12">
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6 mb-6 lg:mb-0">
+              <div
+                className="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
+                style={{ backgroundPosition: '50%' }}
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+              >
+                {mainImage5 && (
+                  <img
+                    className="bg-gray-100 rounded-lg w-full min-h-full"
+                    src={urlFor(mainImage5)}
+                    alt=""
+                  />
+                )}
+                <a href="#!">
+                  <div
+                    className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                    style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}
+                  />
+                </a>
+              </div>
+            </div>
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6">
+              <h3 className="text-2xl font-bold mb-4">{sakuhinnamae5}</h3>
+              <div className="text-red-600 text-sm mb-4 flex items-center font-medium">
+                {tipesetsumei5}
+              </div>
+              <p className="text-gray-500 mb-6">
+                <PostBody5 content={sakuhinsetsumei5} />
+              </p>
+              <div className="text-red-600 text-sm mb-4 flex items-center font-medium">
+                {tipehaikei5}
+              </div>
+              <p className="text-gray-500">
+                <PostRes5 content={sakuhinhaikei5} />
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-wrap lg:flex-row-reverse mb-12">
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6 mb-6 lg:mb-0">
+              <div
+                className="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
+                style={{ backgroundPosition: '50%' }}
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+              >
+                {mainImage6 && (
+                  <img
+                    className="bg-gray-100 rounded-lg w-full "
+                    src={urlFor(mainImage6)}
+                    alt=""
+                  />
+                )}
+
+                <a href="#!">
+                  <div
+                    className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                    style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}
+                  />
+                </a>
+              </div>
+            </div>
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6">
+              <h3 className="text-2xl font-bold mb-4">{sakuhinnamae6}</h3>
+              <div className="text-blue-600 text-sm mb-4 flex items-center font-medium">
+                {tipesetsumei6}
+              </div>
+              <p className="text-gray-500">
+                <PostBody6 content={sakuhinsetsumei6} />
+              </p>
+              <div className="text-blue-600 text-sm mb-4 flex items-center mt-4 font-medium">
+                {tipehaikei6}
+              </div>
+              <p className="text-gray-500">
+                <PostRes6 content={sakuhinhaikei6} />
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap">
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6 mb-6 lg:mb-0">
+              <div
+                className="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
+                style={{ backgroundPosition: '50%' }}
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+              >
+                {mainImage7 && (
+                  <img
+                    className="bg-gray-100 rounded-lg w-full "
+                    src={urlFor(mainImage7)}
+                    alt=""
+                  />
+                )}
+                <a href="#!">
+                  <div
+                    className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                    style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}
+                  />
+                </a>
+              </div>
+            </div>
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6">
+              <h3 className="text-2xl font-bold mb-4">{sakuhinnamae7}</h3>
+              <div className="text-yellow-600 text-sm mb-4 flex items-center font-medium">
+                {tipesetsumei7}
+              </div>
+              <p className="text-gray-500 mb-6 ">
+                <PostBody7 content={sakuhinsetsumei7} />
+              </p>
+              <div className="text-yellow-600 text-sm mb-4 flex items-center font-medium">
+                {tipehaikei7}
+              </div>
+              <p className="text-gray-500">
+                <PostRes7 content={sakuhinhaikei7} />
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      {/* Section: Design Block */}
 
       <div className="products-heading ">
         <h2 className="br-4">他の学科</h2>
@@ -222,12 +490,50 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const query = `*[_type == "movie" && slug.current == '${slug}'][0]{
     _id,
     title,
+    tipesetsumei1,
+    tipesetsumei2,
+    tipesetsumei3,
+    tipesetsumei4,
+    tipesetsumei5,
+    tipesetsumei6,
+    tipesetsumei7,
+    tipehaikei1,
+    tipehaikei2,
+    tipehaikei3,
+    tipehaikei4,
+    tipehaikei5,
+    tipehaikei6,
+    tipehaikei7,
     overview,
+    sakuhinnamae1,
+    sakuhinnamae2,
+    sakuhinnamae3,
+    sakuhinnamae4,
+    sakuhinnamae5,
+    sakuhinnamae6,
+    sakuhinnamae7,
+    sakuhinsetsumei1,
+    sakuhinsetsumei2,
+    sakuhinsetsumei3,
+    sakuhinsetsumei4,
+    sakuhinsetsumei5,
+    sakuhinsetsumei6,
+    sakuhinsetsumei7,
+    sakuhinhaikei1,
+    sakuhinhaikei2,
+    sakuhinhaikei3,
+    sakuhinhaikei4,
+    sakuhinhaikei5,
+    sakuhinhaikei6,
+    sakuhinhaikei7,
     name,
-    mainImage,
-      mainImage2,
-      mainImage3,
-      mainImage4,
+    mainImage1,
+    mainImage2,
+    mainImage3,
+    mainImage4,
+    mainImage5,
+    mainImage6,
+    mainImage7,
     image,
     'cast': castMembers[].person->name,
     'cast2': castMembers[].characterName,

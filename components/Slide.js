@@ -5,12 +5,12 @@ import { motion } from 'framer-motion';
 const Slide = (props) => {
   const slideLeft = () => {
     var slider = document.getElementById('slider');
-    slider.scrollLeft = slider.scrollLeft + 500;
+    slider.scrollLeft = slider.scrollLeft + 330;
   };
 
   const slideRight = () => {
     var slider = document.getElementById('slider');
-    slider.scrollLeft = slider.scrollLeft - 500;
+    slider.scrollLeft = slider.scrollLeft - 330;
   };
 
   return (

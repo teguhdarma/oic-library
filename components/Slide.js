@@ -27,7 +27,7 @@ const Slide = (props) => {
               <img
                 src={urlFor(slide.image)}
                 layout="fill"
-                className="slider-card-image"
+                className="slider-card-image w-10 "
               />
 
               <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">

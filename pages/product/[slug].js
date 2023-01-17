@@ -163,8 +163,8 @@ const ProductDetails = ({ product, products }) => {
               >
                 {mainImage1 && (
                   <img
-                    className="bg-gray-100 rounded-lg w-full min-h-full"
-                    src={urlFor(mainImage1)}
+                    className="bg-gray-100 rounded-lg w-full "
+                    src={urlFor(mainImage1).url()}
                     alt=""
                   />
                 )}
@@ -203,7 +203,7 @@ const ProductDetails = ({ product, products }) => {
                 {mainImage2 && (
                   <img
                     className="bg-gray-100 rounded-lg w-full "
-                    src={urlFor(mainImage2)}
+                    src={urlFor(mainImage2).url()}
                     alt=""
                   />
                 )}
@@ -250,7 +250,7 @@ const ProductDetails = ({ product, products }) => {
               >
                 {mainImage3 && (
                   <img
-                    className="bg-gray-100 rounded-lg w-full min-h-full"
+                    className="bg-gray-100 rounded-lg w-full "
                     src={urlFor(mainImage3)}
                     alt=""
                   />
@@ -336,7 +336,7 @@ const ProductDetails = ({ product, products }) => {
               >
                 {mainImage5 && (
                   <img
-                    className="bg-gray-100 rounded-lg w-full min-h-full"
+                    className="bg-gray-100 rounded-lg w-full "
                     src={urlFor(mainImage5)}
                     alt=""
                   />

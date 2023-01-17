@@ -11,7 +11,6 @@ export default {
       title: 'Title',
       type: 'string',
     },
-
     {
       name: 'tipesetsumei1',
       title: 'Tipesetsumei1',
@@ -48,6 +47,26 @@ export default {
       type: 'string',
     },
     {
+      name: 'tipesetsumei8',
+      title: 'Tipesetsumei8',
+      type: 'string',
+    },
+    {
+      name: 'tipesetsumei9',
+      title: 'Tipesetsumei9',
+      type: 'string',
+    },
+    {
+      name: 'tipesetsumei10',
+      title: 'Tipesetsumei10',
+      type: 'string',
+    },
+    {
+      name: 'tipesetsumei11',
+      title: 'Tipesetsumei11',
+      type: 'string',
+    },
+    {
       name: 'tipehaikei1',
       title: 'Tipehaikei1',
       type: 'string',
@@ -80,6 +99,26 @@ export default {
     {
       name: 'tipehaikei7',
       title: 'Tipehaikei7',
+      type: 'string',
+    },
+    {
+      name: 'tipehaikei8',
+      title: 'Tipehaikei8',
+      type: 'string',
+    },
+    {
+      name: 'tipehaikei9',
+      title: 'Tipehaikei9',
+      type: 'string',
+    },
+    {
+      name: 'tipehaikei10',
+      title: 'Tipehaikei10',
+      type: 'string',
+    },
+    {
+      name: 'tipehaikei11',
+      title: 'Tipehaikei11',
       type: 'string',
     },
 
@@ -125,6 +164,26 @@ export default {
     {
       name: 'sakuhinnamae7',
       title: 'sakuhinnamae7',
+      type: 'string',
+    },
+    {
+      name: 'sakuhinnamae8',
+      title: 'sakuhinnamae8',
+      type: 'string',
+    },
+    {
+      name: 'sakuhinnamae9',
+      title: 'sakuhinnamae9',
+      type: 'string',
+    },
+    {
+      name: 'sakuhinnamae10',
+      title: 'sakuhinnamae10',
+      type: 'string',
+    },
+    {
+      name: 'sakuhinnamae11',
+      title: 'sakuhinnamae11',
       type: 'string',
     },
 
@@ -195,6 +254,38 @@ export default {
       },
     },
     {
+      name: 'mainImage8',
+      title: 'Main image8',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'mainImage9',
+      title: 'Main image9',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'mainImage10',
+      title: 'Main image10',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'mainImage11',
+      title: 'Main image11',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -253,6 +344,26 @@ export default {
       type: 'blockContent',
     },
     {
+      name: 'sakuhinhaikei8',
+      title: 'Sakuhinhaikei8',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinhaikei9',
+      title: 'Sakuhinhaikei9',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinhaikei10',
+      title: 'Sakuhinhaikei10',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinhaikei11',
+      title: 'Sakuhinhaikei11',
+      type: 'blockContent',
+    },
+    {
       name: 'sakuhinsetsumei1',
       title: 'Sakuhinsetsumei1',
       type: 'blockContent',
@@ -287,6 +398,26 @@ export default {
       title: 'Sakuhinsetsumei7',
       type: 'blockContent',
     },
+    {
+      name: 'sakuhinsetsumei8',
+      title: 'Sakuhinsetsumei8',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinsetsumei9',
+      title: 'Sakuhinsetsumei9',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinsetsumei10',
+      title: 'Sakuhinsetsumei10',
+      type: 'blockContent',
+    },
+    {
+      name: 'sakuhinsetsumei11',
+      title: 'Sakuhinsetsumei11',
+      type: 'blockContent',
+    },
 
     {
       name: 'poster',
@@ -295,6 +426,24 @@ export default {
       options: {
         hotspot: true,
       },
+    },
+    {
+      name: 'castMembers',
+      title: 'Cast Members',
+      type: 'array',
+      of: [{ type: 'castMember' }],
+    },
+    {
+      name: 'tipe',
+      title: 'tipe',
+      type: 'reference',
+      to: { type: 'tipe' },
+    },
+    {
+      name: 'crewMembers',
+      title: 'Crew Members',
+      type: 'array',
+      of: [{ type: 'crewMember' }],
     },
   ],
   preview: {

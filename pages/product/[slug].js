@@ -224,9 +224,7 @@ const ProductDetails = ({ product, products }) => {
               <p className="text-gray-500">
                 <PostBody2 content={sakuhinsetsumei2} />
               </p>
-              <div className="text-blue-600 text-sm mb-4 flex items-center mt-4 font-medium">
-                {tipehaikei2}
-              </div>
+              <div className="text-blue-600 text-sm mb-4 flex items-center mt-4 font-medium"></div>
               <p className="text-gray-500">
                 <PostRes2 content={sakuhinhaikei2} />
               </p>
@@ -287,7 +285,7 @@ const ProductDetails = ({ product, products }) => {
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
               >
-                {mainImage2 && (
+                {mainImage4 && (
                   <img
                     className="bg-gray-100 rounded-lg w-full "
                     src={urlFor(mainImage4)}
@@ -312,10 +310,10 @@ const ProductDetails = ({ product, products }) => {
                 <PostBody4 content={sakuhinsetsumei4} />
               </p>
               <div className="text-blue-600 text-sm mb-4 flex items-center mt-4 font-medium">
-                {tipehaikei2}
+                {tipehaikei4}
               </div>
               <p className="text-gray-500">
-                <PostRes4 content={sakuhinhaikei2} />
+                <PostRes4 content={sakuhinhaikei4} />
               </p>
             </div>
           </div>

@@ -16,7 +16,7 @@ export const Footer = () => {
               TEL：086-224-2336
             </p>
             <a
-              href="/"
+              href="https://www.oic-ok.ac.jp/"
               aria-label=""
               className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-white hover:text-teal-accent-700"
             >

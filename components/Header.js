@@ -40,9 +40,9 @@ export const Header = () => {
               href="#about"
               aria-label="Our product"
               title="Our product"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 "
             >
-              about
+              ABOUT
             </a>
           </li>
           <li>
@@ -185,7 +185,7 @@ export const Header = () => {
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        about
+                        ABOUT
                       </a>
                     </li>
                     <li>

@@ -22,7 +22,7 @@ export default function Hero() {
                 できる
               </span>
             </h2>
-            <p className="text-base text-gray-700 md:text-lg">
+            <p className="text-base text-gray-700 md:text-lg ">
               ITを活用するビジネス系とITを生み出す情報系が
               スクラムを組み、変化の激しい時代の未来を見据えた、新しい業界の姿を考え提案します。
             </p>
@@ -30,7 +30,7 @@ export default function Hero() {
           <div className="flex flex-col items-center md:flex-row"></div>
         </div>
       </div>
-      <div className="inset-y-0 right-0 lg:pl-8 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-1/2 lg:max-w-full lg:absolute xl:px-0">
+      <div className="inset-y-0 right-0 lg:pl-8 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-1/2  md:max-w-2xl sm:max-w-full lg:max-w-full lg:absolute xl:px-0">
         <Canvas
           camera={{ position: [2, 0, 12.25], fov: 15 }}
           style={{

@@ -3,7 +3,6 @@ import Swal from 'sweetalert2';
 import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
 import PortableText from 'react-portable-text';
-
 import PostBody from '../../components/post-body';
 import PostBody2 from '../../components/post-body2';
 import PostBody3 from '../../components/post-body3';
@@ -20,7 +19,6 @@ import PostRes6 from '../../components/post-res6';
 import PostRes7 from '../../components/post-res7';
 const ProductDetails = ({ product, products }) => {
   const {
-    _id,
     title,
     tipesetsumei1,
     tipesetsumei2,
@@ -224,7 +222,9 @@ const ProductDetails = ({ product, products }) => {
               <p className="text-gray-500">
                 <PostBody2 content={sakuhinsetsumei2} />
               </p>
-              <div className="text-blue-600 text-sm mb-4 flex items-center mt-4 font-medium"></div>
+              <div className="text-blue-600 text-sm mb-4 flex items-center mt-4 font-medium">
+                {tipehaikei2}
+              </div>
               <p className="text-gray-500">
                 <PostRes2 content={sakuhinhaikei2} />
               </p>

@@ -95,9 +95,9 @@ const Home = ({ products, bannerData, slides }) => {
 
       <section id="articel">
         <div>
-          <div className="max-w7xl mx-auto px-8 sm:px-16 mb-10">
+          <div className="max-w7xl mx-auto px-8 sm:px-16 mb-10 ">
             <div className="products-heading">
-              <h2>OICのツイッター</h2>
+              <h2 className="mb-10">OICのツイッター</h2>
               <div>
                 <TwitterTimelineEmbed
                   sourceType="profile"

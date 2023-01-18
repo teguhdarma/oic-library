@@ -84,14 +84,13 @@ const Home = ({ products, bannerData, slides }) => {
           ))}
         </div>
       </section>
-      {/* <section id="table">
-        <div className="max-w-7xl mx-auto px-8 sm:px-16 mb-4">
-          <div className="products-heading">
-            <h2>タイムテーブル</h2>
-          </div>
-          <Table />
-        </div>
-      </section> */}
+      <section id="table">
+        <img
+          src="img/table.png"
+          className="h-auto  sm:w-full h-full lg:max-w-full rounded-lg content-center"
+          alt="image description"
+        />
+      </section>
 
       <section id="articel">
         <div>
@@ -109,12 +108,12 @@ const Home = ({ products, bannerData, slides }) => {
           </div>
         </div>
       </section>
-      {/* <section id="haishin">
+      <section id="haishin">
         <div className="products-heading">
-          <h2>Youtube から見る</h2>
+          <h2>Youtube配信</h2>
           <New FooterBanner={bannerData && bannerData[0]} />
         </div>
-      </section> */}
+      </section>
 
       <section id="download">
         <div className="products-heading ">

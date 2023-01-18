@@ -55,7 +55,7 @@ export const Header = () => {
               コラボ学科
             </a>
           </li>
-          {/* <li>
+          <li>
             <a
               href="#table"
               aria-label="Product pricing"
@@ -64,7 +64,7 @@ export const Header = () => {
             >
               テーブル
             </a>
-          </li> */}
+          </li>
           <li>
             <a
               href="#articel"
@@ -75,7 +75,7 @@ export const Header = () => {
               OICのツイッター
             </a>
           </li>
-          {/* <li>
+          <li>
             <a
               href="#hairpin"
               aria-label="About us"
@@ -84,7 +84,7 @@ export const Header = () => {
             >
               配信
             </a>
-          </li> */}
+          </li>
           {/* <li>
             <a
               href="#map"

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
+import { Navbar } from '../../components/Navbar';
 import PortableText from 'react-portable-text';
 import PostBody from '../../components/post-body';
 import PostBody2 from '../../components/post-body2';
@@ -94,6 +95,7 @@ const ProductDetails = ({ product, products }) => {
 
   return (
     <div>
+      <Navbar />
       <div className="product-detail-container">
         <div>
           <div>

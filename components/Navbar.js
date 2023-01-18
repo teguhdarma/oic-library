@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-export const Header = () => {
+export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -31,13 +31,15 @@ export const Header = () => {
           </svg> */}
 
           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-            <img src="img/oic.png" alt="" className=" h-16" />
+            <a href="/">
+              <img src="/img/oic.png" alt="" className=" h-16" />
+            </a>
           </span>
         </div>
         <ul className="flex items-center hidden space-x-8 lg:flex">
           <li>
             <a
-              href="#about"
+              href="/#about"
               aria-label="Our product"
               title="Our product"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 "
@@ -47,7 +49,7 @@ export const Header = () => {
           </li>
           <li>
             <a
-              href="#colab"
+              href="/#colab"
               aria-label="Our product"
               title="Our product"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -57,7 +59,7 @@ export const Header = () => {
           </li>
           {/* <li>
             <a
-              href="#table"
+              href="/#table"
               aria-label="Product pricing"
               title="Product pricing"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -67,7 +69,7 @@ export const Header = () => {
           </li> */}
           <li>
             <a
-              href="#articel"
+              href="/#articel"
               aria-label="About us"
               title="About us"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -77,7 +79,7 @@ export const Header = () => {
           </li>
           <li>
             <a
-              href="#haishin"
+              href="/#haishin"
               aria-label="About us"
               title="About us"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -87,7 +89,7 @@ export const Header = () => {
           </li>
           {/* <li>
             <a
-              href="#map"
+              href="/#map"
               aria-label="About us"
               title="About us"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -97,7 +99,7 @@ export const Header = () => {
           </li> */}
           <li>
             <a
-              href="#download"
+              href="/#download"
               aria-label="About us"
               title="About us"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -180,7 +182,7 @@ export const Header = () => {
                   <ul className="space-y-4">
                     <li>
                       <a
-                        href="#about"
+                        href="/#about"
                         aria-label="Our product"
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -190,7 +192,7 @@ export const Header = () => {
                     </li>
                     <li>
                       <a
-                        href="#colab"
+                        href="/#colab"
                         aria-label="Our product"
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -200,7 +202,7 @@ export const Header = () => {
                     </li>
                     {/* <li>
                       <a
-                        href="#table"
+                        href="/#table"
                         aria-label="Product pricing"
                         title="Product pricing"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -210,7 +212,7 @@ export const Header = () => {
                     </li> */}
                     <li>
                       <a
-                        href="#articel"
+                        href="/#articel"
                         aria-label="About us"
                         title="About us"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -220,7 +222,7 @@ export const Header = () => {
                     </li>
                     <li>
                       <a
-                        href="#haishin"
+                        href="/#haishin"
                         aria-label="About us"
                         title="About us"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -230,7 +232,7 @@ export const Header = () => {
                     </li>
                     {/* <li>
                       <a
-                        href="#map"
+                        href="/#map"
                         aria-label="About us"
                         title="About us"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -240,7 +242,7 @@ export const Header = () => {
                     </li> */}
                     <li>
                       <a
-                        href="#download"
+                        href="/#download"
                         aria-label="About us"
                         title="About us"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"

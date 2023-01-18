@@ -5,8 +5,6 @@ import { client, urlFor } from '../lib/client';
 import Features from '../components/Features';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 import New from '../components/New';
-import Table from './Table';
-import Maps from '../components/Maps';
 import Caraosel from '../components/Caraosel';
 import Hero from '../components/Hero';
 import Crisasi from '../components/Crisasi';
@@ -84,13 +82,13 @@ const Home = ({ products, bannerData, slides }) => {
           ))}
         </div>
       </section>
-      <section id="table">
+      {/* <section id="table">
         <img
           src="img/table.png"
           className="h-auto  sm:w-full h-full lg:max-w-full rounded-lg content-center"
           alt="image description"
         />
-      </section>
+      </section> */}
 
       <section id="articel">
         <div>

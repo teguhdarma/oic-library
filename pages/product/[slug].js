@@ -11,6 +11,9 @@ import PostBody4 from '../../components/post-body4';
 import PostBody5 from '../../components/post-body5';
 import PostBody6 from '../../components/post-body6';
 import PostBody7 from '../../components/post-body7';
+import PostBody8 from '../../components/post-body8';
+import PostBody9 from '../../components/post-body9';
+import PostBody10 from '../../components/post-body10';
 import PostRes from '../../components/post-res';
 import PostRes2 from '../../components/post-res2';
 import PostRes3 from '../../components/post-res3';
@@ -18,8 +21,12 @@ import PostRes4 from '../../components/post-res4';
 import PostRes5 from '../../components/post-res5';
 import PostRes6 from '../../components/post-res6';
 import PostRes7 from '../../components/post-res7';
+import PostRes8 from '../../components/post-res8';
+import PostRes9 from '../../components/post-res9';
+import PostRes10 from '../../components/post-res10';
 const ProductDetails = ({ product, products }) => {
   const {
+    _id,
     title,
     tipesetsumei1,
     tipesetsumei2,
@@ -28,6 +35,9 @@ const ProductDetails = ({ product, products }) => {
     tipesetsumei5,
     tipesetsumei6,
     tipesetsumei7,
+    tipesetsumei8,
+    tipesetsumei9,
+    tipesetsumei10,
     tipehaikei1,
     tipehaikei2,
     tipehaikei3,
@@ -35,6 +45,9 @@ const ProductDetails = ({ product, products }) => {
     tipehaikei5,
     tipehaikei6,
     tipehaikei7,
+    tipehaikei8,
+    tipehaikei9,
+    tipehaikei10,
     overview,
     sakuhinnamae1,
     sakuhinnamae2,
@@ -43,6 +56,9 @@ const ProductDetails = ({ product, products }) => {
     sakuhinnamae5,
     sakuhinnamae6,
     sakuhinnamae7,
+    sakuhinnamae8,
+    sakuhinnamae9,
+    sakuhinnamae10,
     sakuhinsetsumei1,
     sakuhinsetsumei2,
     sakuhinsetsumei3,
@@ -50,6 +66,9 @@ const ProductDetails = ({ product, products }) => {
     sakuhinsetsumei5,
     sakuhinsetsumei6,
     sakuhinsetsumei7,
+    sakuhinsetsumei8,
+    sakuhinsetsumei9,
+    sakuhinsetsumei10,
     sakuhinhaikei1,
     sakuhinhaikei2,
     sakuhinhaikei3,
@@ -57,6 +76,9 @@ const ProductDetails = ({ product, products }) => {
     sakuhinhaikei5,
     sakuhinhaikei6,
     sakuhinhaikei7,
+    sakuhinhaikei8,
+    sakuhinhaikei9,
+    sakuhinhaikei10,
     name,
     mainImage1,
     mainImage2,
@@ -65,6 +87,9 @@ const ProductDetails = ({ product, products }) => {
     mainImage5,
     mainImage6,
     mainImage7,
+    mainImage8,
+    mainImage9,
+    mainImage10,
     image,
   } = product;
   console.log(products);
@@ -406,7 +431,7 @@ const ProductDetails = ({ product, products }) => {
             </div>
           </div>
 
-          <div className="flex flex-wrap">
+          {/* <div className="flex flex-wrap">
             <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6 mb-6 lg:mb-0">
               <div
                 className="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
@@ -442,6 +467,172 @@ const ProductDetails = ({ product, products }) => {
               </div>
               <p className="text-gray-500">
                 <PostRes7 content={sakuhinhaikei7} />
+              </p>
+            </div>
+          </div> */}
+        </section>
+      </div>
+      <div className="container my-24 px-6 mx-auto">
+        <section className="mb-32 text-gray-800">
+          <div className="flex flex-wrap mb-12">
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6 mb-6 lg:mb-0">
+              <div
+                className="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
+                style={{ backgroundPosition: '50%' }}
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+              >
+                {mainImage7 && (
+                  <img
+                    className="bg-gray-100 rounded-lg w-full "
+                    src={urlFor(mainImage7)}
+                    alt=""
+                  />
+                )}
+                <a href="#!">
+                  <div
+                    className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                    style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}
+                  />
+                </a>
+              </div>
+            </div>
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6">
+              <h3 className="text-2xl font-bold mb-4">{sakuhinnamae7}</h3>
+              <div className="text-red-600 text-sm mb-4 flex items-center font-medium">
+                {tipesetsumei7}
+              </div>
+              <p className="text-gray-500 mb-6">
+                <PostBody7 content={sakuhinsetsumei7} />
+              </p>
+              <div className="text-red-600 text-sm mb-4 flex items-center font-medium">
+                {tipehaikei7}
+              </div>
+              <p className="text-gray-500">
+                <PostRes7 content={sakuhinhaikei7} />
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-wrap lg:flex-row-reverse mb-12">
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6 mb-6 lg:mb-0">
+              <div
+                className="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
+                style={{ backgroundPosition: '50%' }}
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+              >
+                {mainImage8 && (
+                  <img
+                    className="bg-gray-100 rounded-lg w-full "
+                    src={urlFor(mainImage8)}
+                    alt=""
+                  />
+                )}
+
+                <a href="#!">
+                  <div
+                    className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                    style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}
+                  />
+                </a>
+              </div>
+            </div>
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6">
+              <h3 className="text-2xl font-bold mb-4">{sakuhinnamae8}</h3>
+              <div className="text-blue-600 text-sm mb-4 flex items-center font-medium">
+                {tipesetsumei8}
+              </div>
+              <p className="text-gray-500">
+                <PostBody8 content={sakuhinsetsumei8} />
+              </p>
+              <div className="text-blue-600 text-sm mb-4 flex items-center mt-4 font-medium">
+                {tipehaikei8}
+              </div>
+              <p className="text-gray-500">
+                <PostRes8 content={sakuhinhaikei8} />
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div className="container my-24 px-6 mx-auto">
+        <section className="mb-32 text-gray-800">
+          <div className="flex flex-wrap mb-12">
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6 mb-6 lg:mb-0">
+              <div
+                className="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
+                style={{ backgroundPosition: '50%' }}
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+              >
+                {mainImage9 && (
+                  <img
+                    className="bg-gray-100 rounded-lg w-full "
+                    src={urlFor(mainImage9)}
+                    alt=""
+                  />
+                )}
+                <a href="#!">
+                  <div
+                    className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                    style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}
+                  />
+                </a>
+              </div>
+            </div>
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6">
+              <h3 className="text-2xl font-bold mb-4">{sakuhinnamae9}</h3>
+              <div className="text-red-600 text-sm mb-4 flex items-center font-medium">
+                {tipesetsumei9}
+              </div>
+              <p className="text-gray-500 mb-6">
+                <PostBody9 content={sakuhinsetsumei9} />
+              </p>
+              <div className="text-red-600 text-sm mb-4 flex items-center font-medium">
+                {tipehaikei9}
+              </div>
+              <p className="text-gray-500">
+                <PostRes9 content={sakuhinhaikei9} />
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-wrap lg:flex-row-reverse mb-12">
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6 mb-6 lg:mb-0">
+              <div
+                className="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
+                style={{ backgroundPosition: '50%' }}
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+              >
+                {mainImage10 && (
+                  <img
+                    className="bg-gray-100 rounded-lg w-full "
+                    src={urlFor(mainImage10)}
+                    alt=""
+                  />
+                )}
+
+                <a href="#!">
+                  <div
+                    className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
+                    style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}
+                  />
+                </a>
+              </div>
+            </div>
+            <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6">
+              <h3 className="text-2xl font-bold mb-4">{sakuhinnamae10}</h3>
+              <div className="text-blue-600 text-sm mb-4 flex items-center font-medium">
+                {tipesetsumei10}
+              </div>
+              <p className="text-gray-500">
+                <PostBody10 content={sakuhinsetsumei10} />
+              </p>
+              <div className="text-blue-600 text-sm mb-4 flex items-center mt-4 font-medium">
+                {tipehaikei10}
+              </div>
+              <p className="text-gray-500">
+                <PostRes10 content={sakuhinhaikei10} />
               </p>
             </div>
           </div>
@@ -497,6 +688,9 @@ export const getStaticProps = async ({ params: { slug } }) => {
     tipesetsumei5,
     tipesetsumei6,
     tipesetsumei7,
+    tipesetsumei8,
+    tipesetsumei9,
+    tipesetsumei10,
     tipehaikei1,
     tipehaikei2,
     tipehaikei3,
@@ -504,6 +698,9 @@ export const getStaticProps = async ({ params: { slug } }) => {
     tipehaikei5,
     tipehaikei6,
     tipehaikei7,
+    tipehaikei8,
+    tipehaikei9,
+    tipehaikei10,
     overview,
     sakuhinnamae1,
     sakuhinnamae2,
@@ -512,6 +709,9 @@ export const getStaticProps = async ({ params: { slug } }) => {
     sakuhinnamae5,
     sakuhinnamae6,
     sakuhinnamae7,
+    sakuhinnamae8,
+    sakuhinnamae9,
+    sakuhinnamae10,
     sakuhinsetsumei1,
     sakuhinsetsumei2,
     sakuhinsetsumei3,
@@ -519,6 +719,9 @@ export const getStaticProps = async ({ params: { slug } }) => {
     sakuhinsetsumei5,
     sakuhinsetsumei6,
     sakuhinsetsumei7,
+    sakuhinsetsumei8,
+    sakuhinsetsumei9,
+    sakuhinsetsumei10,
     sakuhinhaikei1,
     sakuhinhaikei2,
     sakuhinhaikei3,
@@ -526,6 +729,9 @@ export const getStaticProps = async ({ params: { slug } }) => {
     sakuhinhaikei5,
     sakuhinhaikei6,
     sakuhinhaikei7,
+    sakuhinhaikei8,
+    sakuhinhaikei9,
+    sakuhinhaikei10,
     name,
     mainImage1,
     mainImage2,
@@ -534,6 +740,10 @@ export const getStaticProps = async ({ params: { slug } }) => {
     mainImage5,
     mainImage6,
     mainImage7,
+    mainImage8,
+    mainImage9,
+    mainImage10
+    ,
     image,
     'cast': castMembers[].person->name,
     'cast2': castMembers[].characterName,

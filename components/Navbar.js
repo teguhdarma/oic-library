@@ -31,9 +31,7 @@ export const Navbar = () => {
           </svg> */}
 
           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-            <a href="/">
-              <img src="/img/oic.png" alt="" className=" h-16" />
-            </a>
+            <img src="/img/oic.png" alt="" className=" h-16" />
           </span>
         </div>
         <ul className="flex items-center hidden space-x-8 lg:flex">
@@ -42,7 +40,7 @@ export const Navbar = () => {
               href="/#about"
               aria-label="Our product"
               title="Our product"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 "
+              className="font-semibold tracking-wide text-gray-500 transition-colors duration-200 hover:text-deep-purple-accent-400 "
             >
               ABOUT
             </a>
@@ -52,27 +50,27 @@ export const Navbar = () => {
               href="/#colab"
               aria-label="Our product"
               title="Our product"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-semibold tracking-wide text-gray-500 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               コラボ学科
             </a>
           </li>
-          {/* <li>
+          <li>
             <a
               href="/#table"
               aria-label="Product pricing"
               title="Product pricing"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-semibold tracking-wide text-gray-500 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              テーブル
+              タイムスケジュール
             </a>
-          </li> */}
+          </li>
           <li>
             <a
               href="/#articel"
               aria-label="About us"
               title="About us"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-semibold tracking-wide text-gray-500 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               OICのツイッター
             </a>
@@ -82,7 +80,7 @@ export const Navbar = () => {
               href="/#haishin"
               aria-label="About us"
               title="About us"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-semibold tracking-wide text-gray-500 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               配信
             </a>
@@ -92,7 +90,7 @@ export const Navbar = () => {
               href="/#map"
               aria-label="About us"
               title="About us"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-semibold tracking-wide text-gray-500 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               マップ
             </a>
@@ -102,7 +100,7 @@ export const Navbar = () => {
               href="/#download"
               aria-label="About us"
               title="About us"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="font-semibold tracking-wide text-gray-500 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               ダウンロード
             </a>
@@ -185,7 +183,7 @@ export const Navbar = () => {
                         href="/#about"
                         aria-label="Our product"
                         title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className="font-semibold tracking-wide text-gray-500 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         ABOUT
                       </a>
@@ -195,27 +193,27 @@ export const Navbar = () => {
                         href="/#colab"
                         aria-label="Our product"
                         title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className="font-semibold tracking-wide text-gray-500 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         コラボ学科
                       </a>
                     </li>
-                    {/* <li>
+                    <li>
                       <a
                         href="/#table"
                         aria-label="Product pricing"
                         title="Product pricing"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className="font-semibold tracking-wide text-gray-500 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        テーブル
+                        タイムスケジュール
                       </a>
-                    </li> */}
+                    </li>
                     <li>
                       <a
                         href="/#articel"
                         aria-label="About us"
                         title="About us"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className="font-semibold tracking-wide text-gray-500 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         OICのツイッター
                       </a>
@@ -225,27 +223,18 @@ export const Navbar = () => {
                         href="/#haishin"
                         aria-label="About us"
                         title="About us"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className="font-semibold tracking-wide text-gray-500 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         配信
                       </a>
                     </li>
-                    {/* <li>
-                      <a
-                        href="/#map"
-                        aria-label="About us"
-                        title="About us"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        マップ
-                      </a>
-                    </li> */}
+
                     <li>
                       <a
                         href="/#download"
                         aria-label="About us"
                         title="About us"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className="font-semibold tracking-wide text-gray-500 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         ダウンロード
                       </a>

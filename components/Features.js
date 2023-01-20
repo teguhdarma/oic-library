@@ -6,7 +6,7 @@ function Features() {
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl flex sm:max-w-full md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="products-heading">
-        <h2>about</h2>
+        <h2>About</h2>
         <div className="grid gap-8 row-gap-5 lg:grid-cols-3 mt-5 sm:justify-center">
           <div className="relative p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl">
             <div className="absolute bottom-0 left-0 w-full h-1 duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />

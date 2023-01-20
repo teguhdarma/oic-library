@@ -82,13 +82,16 @@ const Home = ({ products, bannerData, slides }) => {
           ))}
         </div>
       </section>
-      {/* <section id="table">
+      <section id="table">
+        <div className="products-heading content-center sm:w-full">
+          <h2>タイムスケジュール</h2>
+        </div>
         <img
-          src="img/table.png"
+          src="img/table3.png"
           className="h-auto  sm:w-full h-full lg:max-w-full rounded-lg content-center"
           alt="image description"
         />
-      </section> */}
+      </section>
 
       <section id="articel">
         <div>

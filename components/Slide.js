@@ -30,8 +30,8 @@ const Slide = (props) => {
                 className="slider-card-image w-10 "
               />
 
-              <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
-                <p className="slider-card-title">{slide.title}</p>
+              <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center ">
+                <p className="slider-card-title ">{slide.title}</p>
 
                 <div>
                   <motion.button whileTap={{ scale: 1.5 }}>

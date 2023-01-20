@@ -108,7 +108,7 @@ const Home = ({ products, bannerData, slides }) => {
       </section>
       <section id="haishin">
         <div className="products-heading">
-          <h2>Youtube配信</h2>
+          <h2>YouTube配信</h2>
           <New FooterBanner={bannerData && bannerData[0]} />
         </div>
       </section>

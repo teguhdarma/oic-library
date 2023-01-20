@@ -31,7 +31,9 @@ export const Navbar = () => {
           </svg> */}
 
           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-            <img src="/img/oic.png" alt="" className=" h-16" />
+            <a href="/">
+              <img src="/img/oic.png" alt="" className=" h-16" />
+            </a>
           </span>
         </div>
         <ul className="flex items-center hidden space-x-8 lg:flex">

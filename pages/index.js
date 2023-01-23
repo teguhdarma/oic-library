@@ -88,7 +88,7 @@ const Home = ({ products, bannerData, slides }) => {
         </div>
         <img
           src="img/time.jpg"
-          className="h-auto  sm:w-full h-full lg:max-w-full rounded-lg content-center"
+          className=" lg:max-w-full rounded-lg content-center"
           alt="image description"
         />
       </section>

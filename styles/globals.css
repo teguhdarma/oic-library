@@ -96,6 +96,12 @@ span.text-red {
   text-align: center;
   font-weight: 600;
 }
+.open {
+  display: block;
+}
+.close {
+  display: none;
+}
 .products-container {
   display: flex;
   flex-wrap: wrap;

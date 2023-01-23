@@ -34,8 +34,7 @@ function Features() {
               </div>
               <p className="mb-2 text-sm text-gray-900">
                 令和4年度 卒業研究発表会 <br /> 2023年1月24日(火) <br />
-                【発表会】 10:15〜16:00 <br />
-                【展示会】 10:00〜18:30
+                【発表会】 10:15〜16:00
               </p>
               <div className="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"></div>
             </div>

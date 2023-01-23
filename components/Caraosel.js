@@ -4,7 +4,7 @@ function Caraosel() {
   return (
     <div>
       <div>
-        <img src="img/main.png" />
+        <img src="img/web123.png" />
       </div>
     </div>
   );

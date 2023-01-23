@@ -87,7 +87,7 @@ const Home = ({ products, bannerData, slides }) => {
           <h2>タイムスケジュール</h2>
         </div>
         <img
-          src="img/sotsu.png"
+          src="img/time.jpg"
           className="h-auto  sm:w-full h-full lg:max-w-full rounded-lg content-center"
           alt="image description"
         />

@@ -38,7 +38,7 @@ const Home = ({ products, bannerData, slides }) => {
       <div>
         <Hero />
       </div>
-      <section className="container flex items-center justify-center h-screen m-auto mb-12 bg-fixed bg-center bg-cover custom-img h-60 "></section>
+      <section className="flex items-center justify-center m-auto mb-12 bg-fixed bg-center bg-cover custom-img h-60 "></section>
       <section>
         <div className="products-heading">
           <h2>学科</h2>
